@@ -12,7 +12,8 @@ The repository now includes optional CSS overrides for the Carbon commerce
 dashboard (`styles/commerce-dashboard-overrides.css`). These styles remove the
 max-width constraints that were previously inherited from the global header and
 footer so that the dashboard content can span the full width of the viewport.
-They also darken and blur the backdrop for the **Manage** modal to prevent the
+They ensure the ledger table wraps long content instead of forcing a horizontal
+scroll bar and darken / blur the backdrop for the **Manage** modal to prevent the
 transparent background from reducing legibility.
 
 To apply the overrides, load the stylesheet after the default site bundle in
