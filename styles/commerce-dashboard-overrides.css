@@ -38,19 +38,45 @@ body.commerce-dashboard .dashboard-content .grid > * {
 }
 
 /*
+  Prevent the commerce ledger table from forcing a horizontal scroll by
+  allowing cells to wrap and by constraining overly wide content.
+*/
+body.commerce-dashboard .commerce-ledger table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+body.commerce-dashboard .commerce-ledger th,
+body.commerce-dashboard .commerce-ledger td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+body.commerce-dashboard .commerce-ledger td .badge,
+body.commerce-dashboard .commerce-ledger td .status,
+body.commerce-dashboard .commerce-ledger td .label {
+  display: inline-flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/*
   Provide a stronger backdrop for the manage modal so that it is readable
   even when the site shell applies transparency.
 */
+.manage-modal .modal-backdrop.show,
 body.commerce-dashboard .modal-backdrop.show {
   opacity: 0.6;
   background-color: rgba(15, 23, 42, 0.85);
 }
 
+.manage-modal .modal-dialog,
 body.commerce-dashboard .manage-modal .modal-dialog {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
+.manage-modal .modal-content,
 body.commerce-dashboard .manage-modal .modal-content {
   background-color: rgba(15, 23, 42, 0.92);
   color: #f8fafc;
@@ -58,11 +84,14 @@ body.commerce-dashboard .manage-modal .modal-content {
   border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
+.manage-modal .modal-header,
+.manage-modal .modal-footer,
 body.commerce-dashboard .manage-modal .modal-header,
 body.commerce-dashboard .manage-modal .modal-footer {
   border-color: rgba(148, 163, 184, 0.25);
 }
 
+.manage-modal .btn,
 body.commerce-dashboard .manage-modal .btn {
   color: inherit;
 }
@@ -71,6 +100,10 @@ body.commerce-dashboard .manage-modal .btn {
   Improve contrast for form labels and helper text within the modal so the
   content remains legible after the darker background is applied.
 */
+.manage-modal label,
+.manage-modal .form-text,
+.manage-modal .form-label,
+.manage-modal .modal-body,
 body.commerce-dashboard .manage-modal label,
 body.commerce-dashboard .manage-modal .form-text,
 body.commerce-dashboard .manage-modal .form-label,
