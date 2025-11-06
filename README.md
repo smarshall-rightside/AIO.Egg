@@ -34,7 +34,7 @@ You also have the ability to set a "Modding Root" folder. This folder is very im
 
 ### Difference Between The Docker Images
 
-We have three docker images that we are now using with version > 2.x. `Production`, `Staging`, and `Beta`. These different docker images will help you test new features of the pterodactyl egg, before they're officially released. The follow the same descriptions as the Carbon builds, but are not related to Carbon in any way. These docker images are apart of the egg.
+We have three docker images that we are now using with version > 2.x. `Production`, `Staging`, and `Beta`. These different docker images will help you test new features of the pterodactyl egg, before they're officially released. The follow the same descriptions as the Carbon builds, but are not related to Carbon in any way. These docker images are apart of the egg and are delivered from our fork at [`ghcr.io/smarshall-rightside/aioegg`](https://ghcr.io/smarshall-rightside/aioegg). Use the matching tag (`production`, `staging`, or `beta`) when selecting an image inside the panel.
 
 **Production** - The most stable version of the Egg. Updated once every few weeks.
 
